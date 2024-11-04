@@ -1,0 +1,20 @@
+﻿<Application x:Class="NET24_Labb3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NET24_Labb3"
+             xmlns:System="clr-namespace:System;assembly=System.Runtime"
+             xmlns:model="clr-namespace:NET24_Labb3.Model"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ObjectDataProvider x:Key="DifficultyValues"
+                             MethodName="GetValues"
+                             ObjectType="{x:Type System:Enum}">
+             <ObjectDataProvider.MethodParameters>
+                 <x:Type TypeName="model:Difficulty" />
+             </ObjectDataProvider.MethodParameters>
+         </ObjectDataProvider>
+        
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <local:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
+    </Application.Resources>
+</Application>

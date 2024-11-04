@@ -1,0 +1,83 @@
+<!-- View/PackOptionsDialog.xaml -->
+<Window x:Class="NET24_Labb3.View.PackOptionsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NET24_Labb3.View"
+        Title="Pack Options" 
+        Height="250" 
+        Width="400"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Pack Name -->
+        <TextBlock Text="Pack Name:" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,10"/>
+        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" 
+                 Grid.Row="0" 
+                 Grid.Column="1"
+                 Margin="0,0,0,10"/>
+
+        <!-- Difficulty -->
+        <TextBlock Text="Difficulty:" 
+                   Grid.Row="1" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,10"/>
+        <ComboBox ItemsSource="{Binding Source={StaticResource DifficultyValues}}"
+                  SelectedItem="{Binding Difficulty}"
+                  Grid.Row="1" 
+                  Grid.Column="1"
+                  Margin="0,0,0,10"/>
+
+        <!-- Time Limit -->
+        <TextBlock Text="Time Limit:" 
+                   Grid.Row="2" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,10"/>
+        <StackPanel Orientation="Horizontal" 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Margin="0,0,0,10">
+            <TextBox Text="{Binding TimeLimitInSeconds, UpdateSourceTrigger=PropertyChanged}"
+                     Width="50"/>
+            <TextBlock Text=" seconds" 
+                       VerticalAlignment="Center" 
+                       Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="4" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right">
+            <Button Content="OK" 
+                    IsDefault="True"
+                    Click="OkButton_Click"
+                    Width="75" 
+                    Margin="0,0,10,0"/>
+            <Button Content="Cancel" 
+                    IsCancel="True"
+                    Width="75"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET24-Labb3", "NET24-Labb3\NET24-Labb3.csproj", "{F1D9B2AB-A12E-4608-B7E0-5A9A0404A2EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1D9B2AB-A12E-4608-B7E0-5A9A0404A2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D9B2AB-A12E-4608-B7E0-5A9A0404A2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D9B2AB-A12E-4608-B7E0-5A9A0404A2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D9B2AB-A12E-4608-B7E0-5A9A0404A2EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
